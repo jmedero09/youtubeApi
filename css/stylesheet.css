@@ -1,0 +1,10 @@
+#search-field{
+	text-align: center;
+}
+input[type="text"]{
+	width: 300px;
+   	height: 25px;
+}
+#search-result{
+text-align: center;
+}
