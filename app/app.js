@@ -40,28 +40,21 @@ $(document).ready(function(){
 			
 			vid.display();//not working
 
-
-			//this works just needs to be uncommented 
-			//$('#search-result').append('<a href="https://www.youtube.com/watch?v=' + vid.videoId + '">' + '<img src="' + vid.photoUrl+ '">' + '</a>');
 		}
 	}
 
 
 function video(videoId,photoUrl) {
-	
-	//this.url = url;
 
 	this.videoId = videoId;
 
 	this.photoUrl = photoUrl;
 
-	this.display = function(){
-		
-		//console.log(this.videoId,this.photoUrl);
-		$('#search-result').append('<a href="https://www.youtube.com/watch?v=' + this.videoId + '<img src="' + this.photoUrl + '">' + '</a>');
+}
 
-	};
+video.prototype.display = function(){
 
+	$('#search-result').append('<a href="https://www.youtube.com/watch?v=' + this.videoId + '">' + '<img src="' + this.photoUrl + '">' + '</a>');
 }
 
 
