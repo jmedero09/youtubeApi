@@ -43,30 +43,17 @@ $(document).ready(function(){
 		}
 	}
 
+	function video(videoId,photoUrl) {
 
-function video(videoId,photoUrl) {
+		this.videoId = videoId;
 
-	this.videoId = videoId;
+		this.photoUrl = photoUrl;
 
-	this.photoUrl = photoUrl;
+	}
 
-}
+	video.prototype.display = function(){
 
-video.prototype.display = function(){
-
-	$('#search-result').append('<a href="https://www.youtube.com/watch?v=' + this.videoId + '">' + '<img src="' + this.photoUrl + '">' + '</a>');
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+		$('#search-result').append('<a href="https://www.youtube.com/watch?v=' + this.videoId + '">' + '<img src="' + this.photoUrl + '">' + '</a>');
+		
+	}
 });
